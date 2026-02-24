@@ -7,7 +7,7 @@ def merge(ranges):
         else: rs[-1] = (rs[-1][0], max(rs[-1][1], e))
     return rs
 
-fresh, ids = sys.stdin.read().strip().split('\n\n')
+fresh, ids = '\n'.join(sys.stdin.read().strip().splitlines()).split('\n\n')
 fresh = merge(tuple(map(int, f.split('-'))) for f in fresh.splitlines())
 ids = list(map(int, ids.splitlines()))
 

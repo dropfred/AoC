@@ -6,6 +6,6 @@ def part_1(puzzle):
         for a, ss in (r.split(': ') for r in puzzle[-1].splitlines())
     ))
 
-puzzle = sys.stdin.read().strip().split('\n\n')
+puzzle = '\n'.join(sys.stdin.read().strip().splitlines()).split('\n\n')
 
 print('part 1:', part_1(puzzle))
